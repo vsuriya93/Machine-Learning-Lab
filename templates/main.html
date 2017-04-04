@@ -1,0 +1,62 @@
+<html>
+<style>
+body {
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+div {
+    text-align: left;
+    background-color: white;
+    width: 1000px;
+    height: 430px;
+    padding: 30px ;
+    border: 2px solid white;
+    margin:110px auto;
+}
+
+ select {
+    width: 100%;
+    padding: 10px ;
+    border: 2px solid grey;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+form {
+    display: inline;
+}
+</style>
+<head><title>Machine Learning Course Page</title></head>
+<body background="back1.jpg">
+<img src="12345.jpg" style="float: left; padding: 0px; width: 200px; height: 500px;">
+<img src="1.JPG" style="float: right; padding: 0px; width: 200px; height: 500px;">
+<div class="boxed">
+<h3  align="center"><font color = "orange"> Welcome to Machine Learning Assignment Course Page</font></h3>
+Sairam. Welcome to Machine Learning Course Page. This forum helps you in submission of your assignments. Please read the instructions below
+<p>
+<li>Please submit all your assignments by the due date - we will not accept late submission.. Sorry</li>
+<p>
+<li>Once the assignment is opened you will be able to download it by requesting it below</li>
+<p>
+<li>All your submission should have a <i>Readme</i> file and <i>comments</i> are a must</li>
+<p>
+<li>All assignments should be submitted in <b>.zip</b> format</li>
+<p>
+You can download the assignments by selecting the correct assignment below.
+<form action="submit" method = "POST" 
+         enctype = "multipart/form-data">
+Select Assignment
+ <select name="assignment_number"> 
+ {% for y in assignments %}
+  <option value="{{ y }}">{{ y }}</option>
+ {% endfor %}	
+</select> 
+<p>
+<input type="submit" name="submit" value="Request Assignment" style="height: 40px; background-color: yellow;"/>
+<input type="submit" name="submit" value="Go to Submission Page" style="float: right; height: 40px; background-color: orange"/>
+</h4>
+</form>
+</div>
+<h4 align=right ><font color = "white"> Created by V.Suriyanarayanan</font></h4>
+</body>
+</html>

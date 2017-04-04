@@ -1,0 +1,53 @@
+<html>
+<style>
+body {
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+div {
+    text-align: left;
+    background-color: white;
+    width: 600px;
+    padding: 30px ;
+    border: 2px solid blue;
+    margin:150px auto;
+}
+
+ select {
+    width: 100%;
+    padding: 10px ;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+</style>
+<head><title>Machine Learning Course Page</title></head>
+<body background="back3.jpg">
+<div class="boxed">
+<h3><font color = "orange"> Welcome to Machine Learning Assignment Submission</font></h3>
+<h4>
+<form action="assignment_upload" method = "POST" 
+         enctype = "multipart/form-data">
+Student Name <select name="student_name">
+ {% for y in student_name %}
+  <option value="{{ y }}">{{ y }}</option>
+ {% endfor %}	
+</select> 
+<p>
+Select Assignment Category
+ <select name="assignment_number"> 
+ {% for y in assignments %}
+  <option value="{{ y }}">{{ y }}</option>
+ {% endfor %}	
+</select> 
+<p>
+Upload File
+<input type="file"  name="student_assignment" accept="zip"/>
+<p>
+<center><input type="submit" value="Submit"/>
+</h4>
+</form>
+</div>
+</body>
+</html>

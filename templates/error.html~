@@ -1,0 +1,34 @@
+<html>
+<style>
+body {
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+div {
+    text-align: left;
+    background-color: white;
+    width: 600px;
+    padding: 30px ;
+    border: 2px solid red;
+    margin:150px auto;
+}
+
+ select {
+    width: 100%;
+    padding: 10px ;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+</style>
+<head><title>Machine Learning Course Page</title></head>
+<body>
+<div class="boxed">
+<h3><marquee><font color = "orange"> Welcome to Machine Learning Assignment Submission</font></marquee></h3>
+<h4> {{ message }} 
+
+</div>
+
+</body>
+</html>
